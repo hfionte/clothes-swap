@@ -14,7 +14,42 @@
     </head>
     <body>
 
-        <p>Hello world! This is HTML5 Boilerplate.</p>
+        <div id="main">
+            <h1>Baby Clothes Swap</h1>
+            <div class="filters">
+                <h3>Filter by:</h3>
+                <p>
+                    Size:
+                    <select id="filter-size">
+                        <option value="all">All</option>
+                        <option value="newborn">Newborn</option>
+                        <option value="3m">3 Months</option>
+                    </select>
+                </p>
+            </div>
+            <h2>Available items:</h2>
+            <div class="items">
+                
+                <div class="item" data-itemtype="onesie" data-itemcolor="blue" data-itemgender="male" data-itemsize="3m">
+                    <div class="photo">
+                        <img src="img/max-plaid-onesie.jpg">
+                    </div>
+                    <div class="info">
+                        <strong>size:</strong> 3 months
+                    </div>
+                </div>
+                
+                <div class="item" data-itemtype="onesie" data-itemcolor="blue" data-itemgender="male" data-itemsize="newborn">
+                    <div class="photo">
+                        <img src="img/max-plaid-onesie.jpg">
+                    </div>
+                    <div class="info">
+                        <strong>size:</strong> Newborn
+                    </div>
+                </div>
+                
+            </div>
+        </div>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
