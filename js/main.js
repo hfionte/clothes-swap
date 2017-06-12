@@ -16,7 +16,7 @@ $(document).ready(function() {
     
     function hideItems(filterName, filterValue) {
         $('.item').each(function(items, item) {            
-            if ($(item).data(filterName) !== filterValue) {
+            if ($(item).data(filterName).indexOf(filterValue) === -1) {
                 $(item).hide();
             }
         });
