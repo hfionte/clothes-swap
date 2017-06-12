@@ -2,16 +2,24 @@
 $(document).ready(function() {
     
     $('.filters select').on('change', function(e) {
-        console.log(e.target.value);
-        var filterName = $(e.target).data('filtername');
-        var filterValue = $(e.target).val();
+        $('.item').show();
+        $('.filter').each(function(filters, filter) {
+            var filterName = $(filter).data('filtername');
+            var filterValue = $(filter).val();
+            if (filterValue !== 'all') {
+                hideItems(filterName, filterValue);   
+            }
+        });
+        
+        
+    });
+    
+    function hideItems(filterName, filterValue) {
         $('.item').each(function(items, item) {            
-            if ($(item).data(filterName) === filterValue) {
-                $(item).show();
-            } else {
+            if ($(item).data(filterName) !== filterValue) {
                 $(item).hide();
             }
         });
-    });
+    }
     
 });
